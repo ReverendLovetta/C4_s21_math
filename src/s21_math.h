@@ -7,9 +7,13 @@
 #define s21_INF 1.0 / 0.0
 #define s21_E 2.71828182845904523536028747135266250
 
-#include <stdio.h>
-#include <limits.h>
+#define s21_HUGE_VAL __builtin_huge_val()
+#define s21_HUGE_VALF __builtin_huge_valf()
+#define s21_HUGE_VALL __builtin_huge_vall()
+
 #include <float.h>
+#include <limits.h>
+#include <stdio.h>
 
 int s21_abs(int x);
 long double s21_fabs(double x);

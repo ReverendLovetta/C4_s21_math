@@ -2,7 +2,7 @@
 
 long double s21_log(double x) {
   long double result = 0;
-  if (s21_isnan(x) || s21_isinf(x)) {
+  if ((x == s21_NAN) || (x == s21_INF)) {
     result = x;
   } else if (x == 1) {
     result = +0;

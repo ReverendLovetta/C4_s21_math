@@ -190,6 +190,18 @@ START_TEST(test_s21_s_exp_03) {
 }
 END_TEST
 
+START_TEST(test_s21_s_exp_04) {
+  double x = -10000;
+  ck_assert_ldouble_eq(s21_exp(x), exp(x));
+}
+END_TEST
+
+START_TEST(test_s21_s_exp_05) {
+  double x = -20;
+  ck_assert_ldouble_eq_tol(s21_exp(x), exp(x), 1e-6);
+}
+END_TEST
+
 Suite *math_test(void) {
   Suite *s;
   TCase *tc_s21_exp_00, *tc_s21_exp_01, *tc_core, *tc_s21_exp_02;
@@ -229,6 +241,8 @@ Suite *math_test(void) {
   tcase_add_test(tc_s21_exp_02, test_s21_s_exp_01);
   tcase_add_test(tc_s21_exp_02, test_s21_s_exp_02);
   tcase_add_test(tc_s21_exp_02, test_s21_s_exp_03);
+  tcase_add_test(tc_s21_exp_02, test_s21_s_exp_04);
+  tcase_add_test(tc_s21_exp_02, test_s21_s_exp_05);
   suite_add_tcase(s, tc_s21_exp_02);
   return s;
 }

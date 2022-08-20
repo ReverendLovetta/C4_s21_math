@@ -2,8 +2,10 @@
 
 long double s21_log(double x) {
   long double result = 0;
-  if ((x == s21_NAN) || (x == s21_INF)) {
-    result = x;
+  if (__builtin_isnan(x)) {
+    result = s21_NAN;
+  } else if (x == +s21_INF) {
+    result = +s21_INF;
   } else if (x == 1) {
     result = +0;
   } else if (x == 0) {

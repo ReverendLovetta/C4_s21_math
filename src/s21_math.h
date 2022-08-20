@@ -1,5 +1,7 @@
-#ifndef SRC_S21_MATH_H_
-#define SRC_S21_MATH_H_
+#ifndef PROJECTS_C4_S21_MATH_2_SRC_S21_MATH_H_
+// #ifndef SRC_S21_MATH_H_
+#define PROJECTS_C4_S21_MATH_2_SRC_S21_MATH_H_
+// #define SRC_S21_MATH_H_
 
 #define s21_pi 3.14159265358979323846264338327950288
 #define s21_MAL 0.000001
@@ -31,4 +33,5 @@ long double s21_floor(double x);
 long double s21_exp(double x);
 long double s21_sqrt(double x);
 
-#endif  // SRC_S21_MATH_H_
+// #endif  // SRC_S21_MATH_H_
+#endif  // PROJECTS_C4_S21_MATH_2_SRC_S21_MATH_H_
